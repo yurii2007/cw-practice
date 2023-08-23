@@ -23,20 +23,19 @@
 // console.log(doMath("24z6 1x23 y369 89a 900b"));
 
 // function capitals(word) {
-	// Write your code here
-    // const result = [];
-    // word.split('').reduce((acc,e,i,arr) => {
-    //     if (e.toUpperCase() === e) {
-    //         result.push(i)
-    //     }
-    // },[])
-    // return result;
+// Write your code here
+// const result = [];
+// word.split('').reduce((acc,e,i,arr) => {
+//     if (e.toUpperCase() === e) {
+//         result.push(i)
+//     }
+// },[])
+// return result;
 
-
-        // return word.split('').reduce(function(result, c, i) {
-        //   if (c.toUpperCase() === c) result.push(i);
-        //   return result;
-        // }, []);
+// return word.split('').reduce(function(result, c, i) {
+//   if (c.toUpperCase() === c) result.push(i);
+//   return result;
+// }, []);
 // };
 
 // console.log(capitals('CodEWaRs'));
@@ -59,7 +58,6 @@
 //       requiredMonmeCoins = parseInt(cost / 60);
 //     }
 
-    
 //     if (requiredMonCoins > monCoins) return `leaving the market`;
 //     return [monCoins, monmeCoins, monCoins + (monmeCoins * 60), (requiredMonmeCoins + requiredMonCoins)]
 //   }
@@ -73,7 +71,6 @@
 // console.log(buyTofu(5, "mon monme"));
 
 // console.log(buyTofu(123, "mon mon monme monme mon")); // Виведе: [2, 2, 122, 5]
-
 
 /* Should return ᐃ type:
   0 : if ᐃ cannot be made with given sides
@@ -90,7 +87,6 @@
 //     if(Math.pow(sides[2],2) < Math.pow(sides[0],2) + Math.pow(sides[1],2)) return 1;
 
 //     if(Math.pow(sides[2],2) > Math.pow(sides[0],2) + Math.pow(sides[1],2)) return 3;
-
 
 //     [a, b, c] = [a, b, c].sort((n, m) => n - m);
 //     const [a2, b2, c2] = [a, b, c].map(v => v ** 2);
@@ -137,7 +133,7 @@
 
 // function toUnderscore(string) {
 //   // TODO: complete
-//   if(!isNaN(string)) return (string+'') 
+//   if(!isNaN(string)) return (string+'')
 //   const arr = string.split('');
 //   const filteredArr = [];
 //   for (const item of arr) {
@@ -150,7 +146,6 @@
 // }
 
 // console.log(toUnderscore(str));
-
 
 // function solution(number){
 //   if(number <= 0) return 0;
@@ -191,7 +186,7 @@
 //       if(val === val2) throw new Error("Equal");
 //       else return true;
 //   }
-//   }      
+//   }
 // };
 
 // console.log(expect(5).toBe(5));
@@ -209,7 +204,6 @@
 // console.log(counter.increment());
 // console.log(counter.reset());
 // console.log(counter.decrement());
-
 
 // function colorProbability(color, texture){
 //   //your code here
@@ -232,3 +226,23 @@
 
 // console.log(colorProbability('red','bumpy'));
 // console.log(colorProbability('yellow', 'smooth'));
+
+// Every year he takes photos of farmers handshaking. Johnny knows that no two farmers handshake more than once.
+// He also knows that some of the possible handshake combinations may not happen.
+// However, Johnny would like to know the minimal amount of people that participated this year just by counting all the handshakes.
+// Help Johnny by writing a function, that takes the amount of handshakes and returns the minimal amount of people
+// needed to perform these handshakes (a pair of farmers handshake only once).
+
+// function getParticipants(handshakes) {
+//   if (handshakes < 1) return 0;
+//   let hs = 0;
+//   let min = 1;
+
+//     for (let i = 1; i <= handshakes; i += 1) {
+//       if(hs >= handshakes) break;
+//       hs += i;
+//       min += 1;
+//     }
+//     return min;
+// }
+// console.log(getParticipants(100));

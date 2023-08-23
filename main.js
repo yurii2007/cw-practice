@@ -1,6 +1,5 @@
 // Задача: Обчислити суму двох чисел і вивести результат на консоль.
 
-// дві консти через промпт плюс конста з додаванням
 
 // const firstNumber = parseInt(prompt("Enter first number"));
 // const secondNumber = parseInt(prompt("Enter first number"));
