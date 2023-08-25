@@ -246,3 +246,21 @@
 //     return min;
 // }
 // console.log(getParticipants(100));
+
+// RGB To Hex Conversion
+
+// const rgb1 = [255, 255, 255] //--> "FFFFFF"
+// const rgb2 = [255, 255, 300] //--> "FFFFFF"
+// const rgb3 = [0, 0, 0]       //--> "000000"
+// const rgb4 = [148, 0, 211]   //--> "9400D3"
+
+// function rgb(r, g, b){
+//    return [...arguments].map(el=>{
+//     if(el > 255) el=255;
+//     if(el < 0) el = 0;
+//     return el.toString(16).padStart(2, '0')
+//   }).join('').toUpperCase()
+// }
+
+// console.log(rgb(...rgb4));
+
