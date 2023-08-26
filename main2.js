@@ -264,3 +264,96 @@
 
 // console.log(rgb(...rgb4));
 
+
+
+// The input numbers are big.
+// The input is a string of only digits
+// The numbers are positives
+
+// function add(a, b) {
+//   let firstNum;
+//   let secondNum;
+//   const res = [];
+//   let stairsAdd = 0;
+//   if(a.length > b.length) {
+//     firstNum = a.split('').map(el=>+el).reverse();
+//     secondNum = b.split('').map(el=>+el).reverse();
+//     } else {
+//      firstNum = b.split('').map(el=>+el).reverse();
+//      secondNum = a.split('').map(el=>+el).reverse();
+//     }
+
+//   firstNum.reduce((acc,num,idx,arr)=>{
+//     if(secondNum[idx]) {
+//     stairsAdd = num + secondNum[idx] + acc
+//     if (stairsAdd < 10) {
+//       res.push(stairsAdd)
+//       acc = 0
+//       return acc;
+//     }
+//     if(arr.length - 1 === idx) {
+//       res.push(stairsAdd);
+//       return
+//     }
+//     res.push(+stairsAdd.toString()[1])
+//     acc = 1
+//     return acc
+//     } else {
+//       stairsAdd = num + acc;
+//       if (stairsAdd < 10) {
+//         res.push(stairsAdd)
+//         acc = 0
+//         return acc;
+//       }
+//       if(arr.length - 1 === idx) {
+//         res.push(stairsAdd);
+//         return
+//       }
+//       res.push(+stairsAdd.toString()[1])
+//       acc = 1
+//       return acc
+//     }
+//   },0)
+//   res.reverse()
+//   for(let i = 0; i < res.length; i += 1) {
+//     if(res[i] === 0){
+//       res.shift()
+//     }
+//     else {
+//       return res.join('')
+//     }
+//   }
+// }
+
+// console.log(add('63829983432984289347293874', '90938498237058927340892374089'));
+// // "91002328220491911630239667963"
+// // 91002328220491911630239667963
+// console.log(add('99', '11'));
+// console.log(add('00103', '08567'));
+
+
+// The arguments are passed as strings.
+// The numbers may be way very large
+// Answer should be returned as a string
+// The returned "number" should not start with zeros e.g. 0123 is invalid
+// Note: 100 randomly generated tests!
+
+// function multiply(a, b){
+//   const firstNum = a.split('').map(el=>+el)
+//   const secondNum = b.split('').map(el=>+el);
+//   const numToAdd = [];
+//   for (const num1 of firstNum) {
+//     const stairsAdd = 0;
+//     for (const num2 of secondNum) {
+//       stairsAdd === 0 ? (num1 * num2 > 10 ? stairsAdd = (num1*num2).toString()[0] ): num1 * num2 + stairsAdd
+//     }
+    
+    
+//    numToAdd.unshift() 
+//   }
+//   return numToAdd
+// }
+
+//  assert.strictEqual(multiply("30", "69"), "2070");
+// console.log(multiply('30','69'));
+// console.log(multiply('44','276'));
