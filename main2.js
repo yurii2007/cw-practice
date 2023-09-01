@@ -280,7 +280,6 @@
 //      firstNum = b.split('').map(el=>+el).reverse();
 //      secondNum = a.split('').map(el=>+el).reverse();
 //     }
-
 //   firstNum.reduce((acc,num,idx,arr)=>{
 //     if(secondNum[idx]) {
 //     stairsAdd = num + secondNum[idx] + acc
@@ -335,6 +334,8 @@
 // The returned "number" should not start with zeros e.g. 0123 is invalid
 // Note: 100 randomly generated tests!
 
+console.log("cumback to this line and complete this fuckin' kata");
+
 // function multiply(a, b){
 //   const firstNum = a.split('').map(el=>+el)
 //   const secondNum = b.split('').map(el=>+el);
@@ -342,14 +343,15 @@
 //   for (const num1 of firstNum) {
 //     const stairsAdd = 0;
 //     for (const num2 of secondNum) {
-//       stairsAdd === 0 ? num1 * num2 > 10 ? stairsAdd = (num1*num2).toString()[0] : (num1 * num2 + stairsAdd)
+//       stairsAdd = 
+//       stairsAdd === 0 ? num1 * num2 > 10 ? stairsAdd = (num1 * num2).toString()[0] : (num1 * num2 + stairsAdd) :
 //     }
 //    numToAdd.unshift()
 //   }
 //   return numToAdd
 // }
 
-//  assert.strictEqual(multiply("30", "69"), "2070");
+// //  assert.strictEqual(multiply("30", "69"), "2070");
 // console.log(multiply('30','69'));
 // console.log(multiply('44','276'));
 
@@ -370,3 +372,29 @@ With list [20,37,20,21] and number 1, the result would be [20,37,21].*/
 
 // console.log(deleteNth([20, 37, 20, 21], 1)); //[20,37,21]
 // console.log(deleteNth([1,2,3,1,1,2,1,2,3,3,2,4,5,3,1], 3)); //[ 1, 2, 3, 1, 1, 2, 2, 3, 3, 4, 5 ])
+
+// The marketing team is spending way too much time typing in hashtags.
+// Let's help them with our own Hashtag Generator!
+// Here's the deal:
+// It must start with a hashtag (#).
+// All words must have their first letter capitalized.
+// If the final result is longer than 140 chars it must return false.
+// If the input or the result is an empty string it must return false
+
+// function capitalize(inputString) {
+//   return inputString
+//     .split(" ")
+//     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+//     .join(" ");
+// }
+
+// function generateHashtag (str) {
+//   const normalizeString = capitalize(str.trim()).split('').filter(el=>el!==' ')
+//   if(!str.trim() || normalizeString.length >= 140) return false
+//   normalizeString.unshift("#")
+//   return normalizeString.join('')
+// }
+
+// console.log(generateHashtag("Do We have a hashtag"))// "#DoWeHaveAHashtag);
+// console.log(generateHashtag("code" + " ".repeat(140) + "wars"));
+// console.log(generateHashtag("a".repeat(140)));
