@@ -401,12 +401,12 @@ With list [20,37,20,21] and number 1, the result would be [20,37,21].*/
 
 // zipWith ( or zip_with ) takes a function and two arrays and zips the arrays together, applying the function to every pair of values.
 
-function zipWith(fn, a0, a1) {
-  const res =
-    a1.length < a0.length
-      ? a1.map((el, i) => fn(el, a0[i]))
-      : a0.map((el, i) => fn(el, a1[i]));
-  return res
-}
+// function zipWith(fn, a0, a1) {
+//   const res =
+//     a1.length < a0.length
+//       ? a1.map((el, i) => fn(el, a0[i]))
+//       : a0.map((el, i) => fn(el, a1[i]));
+//   return res
+// }
 
-console.log(zipWith( Math.pow, [10,10,10,10], [0,1,2,3] ));
+// console.log(zipWith( Math.pow, [10,10,10,10], [0,1,2,3] ));
