@@ -264,8 +264,6 @@
 
 // console.log(rgb(...rgb4));
 
-
-
 // The input numbers are big.
 // The input is a string of only digits
 // The numbers are positives
@@ -331,7 +329,6 @@
 // console.log(add('99', '11'));
 // console.log(add('00103', '08567'));
 
-
 // The arguments are passed as strings.
 // The numbers may be way very large
 // Answer should be returned as a string
@@ -345,11 +342,9 @@
 //   for (const num1 of firstNum) {
 //     const stairsAdd = 0;
 //     for (const num2 of secondNum) {
-//       stairsAdd === 0 ? (num1 * num2 > 10 ? stairsAdd = (num1*num2).toString()[0] ): num1 * num2 + stairsAdd
+//       stairsAdd === 0 ? num1 * num2 > 10 ? stairsAdd = (num1*num2).toString()[0] : (num1 * num2 + stairsAdd)
 //     }
-    
-    
-//    numToAdd.unshift() 
+//    numToAdd.unshift()
 //   }
 //   return numToAdd
 // }
@@ -357,3 +352,21 @@
 //  assert.strictEqual(multiply("30", "69"), "2070");
 // console.log(multiply('30','69'));
 // console.log(multiply('44','276'));
+
+/*Given a list and a number, create a new list that contains each number of list at most N times, without reordering.
+For example if the input number is 2, and the input list is [1,2,3,1,2,1,2,3], you take [1,2,3,1,2], 
+drop the next [1,2] since this would lead to 1 and 2 being in the result 3 times, and then take 3, which leads to [1,2,3,1,2,3].
+With list [20,37,20,21] and number 1, the result would be [20,37,21].*/
+
+// function deleteNth(arr, n) {
+//   // ...
+//   const res = [];
+//   for (const num of arr) {
+//     res.push(num)
+//     if(res.filter(el=>el===num).length > n) res.pop();
+//   }
+//   return res
+// }
+
+// console.log(deleteNth([20, 37, 20, 21], 1)); //[20,37,21]
+// console.log(deleteNth([1,2,3,1,1,2,1,2,3,3,2,4,5,3,1], 3)); //[ 1, 2, 3, 1, 1, 2, 2, 3, 3, 4, 5 ])
