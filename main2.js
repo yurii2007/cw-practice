@@ -343,7 +343,7 @@ console.log("cumback to this line and complete this fuckin' kata");
 //   for (const num1 of firstNum) {
 //     const stairsAdd = 0;
 //     for (const num2 of secondNum) {
-//       stairsAdd = 
+//       stairsAdd =
 //       stairsAdd === 0 ? num1 * num2 > 10 ? stairsAdd = (num1 * num2).toString()[0] : (num1 * num2 + stairsAdd) :
 //     }
 //    numToAdd.unshift()
@@ -398,3 +398,15 @@ With list [20,37,20,21] and number 1, the result would be [20,37,21].*/
 // console.log(generateHashtag("Do We have a hashtag"))// "#DoWeHaveAHashtag);
 // console.log(generateHashtag("code" + " ".repeat(140) + "wars"));
 // console.log(generateHashtag("a".repeat(140)));
+
+// zipWith ( or zip_with ) takes a function and two arrays and zips the arrays together, applying the function to every pair of values.
+
+function zipWith(fn, a0, a1) {
+  const res =
+    a1.length < a0.length
+      ? a1.map((el, i) => fn(el, a0[i]))
+      : a0.map((el, i) => fn(el, a1[i]));
+  return res
+}
+
+console.log(zipWith( Math.pow, [10,10,10,10], [0,1,2,3] ));
