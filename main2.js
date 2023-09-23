@@ -410,3 +410,55 @@ With list [20,37,20,21] and number 1, the result would be [20,37,21].*/
 // }
 
 // console.log(zipWith( Math.pow, [10,10,10,10], [0,1,2,3] ));
+
+// Refusing to surrender to the enemy, they instead opted for mass suicide, with a twist:
+//  they formed a circle and proceeded to kill one man every three, until one last man was
+//  left (and that it was supposed to kill himself to end the act).
+// STEP 3
+/*[1,2,3,4,5,6,7] -0
+[1,2,4,5,6,7] -1
+[1,2,4,5,7] -1
+[1,4,5,7] -3
+[1,4,5] => -4
+[1,4] => -5
+[4] => -6
+[] => -7*/
+
+function josephus(items, k) {
+  //your code here
+  const result = [];
+  let currentStep = 0;
+  const length = items.length;
+  while (result.length === length) {
+    if (currentStep === k) {
+      result.push();
+    }
+  }
+  return result;
+}
+
+// console.log(josephus([1,2,3,4,5,6,7],3)); // [3,6,2,7,5,1,4]
+
+// In a string we describe a road. There are cars that move to the right and we denote them with ">" and cars that move
+// to the left and we denote them with "<". There are also cameras that are indicated by: " . ".
+// A camera takes a photo of a car if it moves to the direction of the camera.
+// Your task is to write a function such that, for the input string that represents a road as described,
+// returns the total number of photos that were taken by the cameras. The complexity should be strictly O(N) in order to pass all the tests.
+
+function countPhotos(road) {
+  const array = road.split("");
+  let result = 0;
+  array.map((elem, index) => {
+    if (elem === ".") {
+      const quantityOfPhotos = [...array].filter((el, i) => {
+        if (el === ".") return false;
+        if (i < index) return el === ">" ? true : false;
+        if (i > index) return el === "<" ? true : false;
+      });
+      result += quantityOfPhotos.length;
+    }
+  });
+  return result;
+}
+
+console.log(countPhotos(">.<")); //For ".><.>>.<<" -> 11 photos were taken
