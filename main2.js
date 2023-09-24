@@ -445,20 +445,43 @@ function josephus(items, k) {
 // Your task is to write a function such that, for the input string that represents a road as described,
 // returns the total number of photos that were taken by the cameras. The complexity should be strictly O(N) in order to pass all the tests.
 
-function countPhotos(road) {
-  const array = road.split("");
-  let result = 0;
-  array.map((elem, index) => {
-    if (elem === ".") {
-      const quantityOfPhotos = [...array].filter((el, i) => {
-        if (el === ".") return false;
-        if (i < index) return el === ">" ? true : false;
-        if (i > index) return el === "<" ? true : false;
-      });
-      result += quantityOfPhotos.length;
-    }
-  });
-  return result;
-}
+// here is the first try(this code smell like shit)
+// function countPhotos(road) {
+//   const array = road.split("");
+//   let result = 0;
+//   array.map((elem, index) => {
+//     if (elem === ".") {
+//       const quantityOfPhotos = [...array].filter((el, i) => {
+//         if (el === ".") return false;
+//         if (i < index) return el === ">" ? true : false;
+//         if (i > index) return el === "<" ? true : false;
+//       });
+//       result += quantityOfPhotos.length;
+//     }
+//   });
+//   return result;
+// }
+//here is a solution after thinking xd
 
-console.log(countPhotos(">.<")); //For ".><.>>.<<" -> 11 photos were taken
+// function countPhotos(road) {
+//   const array = road.split("");
+//   let result = 0;
+//   let leftSide = 0;
+//   let rightSide = 0;
+//   let totalNumberOfDots = 0;
+//   for (const item of array) {
+//     if (totalNumberOfDots !== 0 && item === "<") {
+//       leftSide += 1;
+//       result += leftSide * totalNumberOfDots;
+//       leftSide = 0;
+//     } else if (item === ">") {
+//       rightSide += 1;
+//     } else if (item === ".") {
+//       result += rightSide;
+//       totalNumberOfDots += 1;
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(countPhotos(".><.>>.<<")); //For ".><.>>.<<" -> 11 photos were taken
