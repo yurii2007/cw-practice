@@ -334,7 +334,7 @@
 // The returned "number" should not start with zeros e.g. 0123 is invalid
 // Note: 100 randomly generated tests!
 
-console.log("cumback to this line and complete this fuckin' kata");
+console.log("qqq");
 
 // function multiply(a, b){
 //   const firstNum = a.split('').map(el=>+el)
@@ -426,18 +426,10 @@ With list [20,37,20,21] and number 1, the result would be [20,37,21].*/
 
 function josephus(items, k) {
   //your code here
-  const result = [];
-  let currentStep = 0;
-  const length = items.length;
-  while (result.length === length) {
-    if (currentStep === k) {
-      result.push();
-    }
-  }
-  return result;
 }
 
 // console.log(josephus([1,2,3,4,5,6,7],3)); // [3,6,2,7,5,1,4]
+// console.log(josephus(["C","o","d","e","W","a","r","s"],4));//['e', 's', 'W', 'o', 'C', 'd', 'r', 'a']
 
 // In a string we describe a road. There are cars that move to the right and we denote them with ">" and cars that move
 // to the left and we denote them with "<". There are also cameras that are indicated by: " . ".
@@ -485,3 +477,134 @@ function josephus(items, k) {
 // }
 
 // console.log(countPhotos(".><.>>.<<")); //For ".><.>>.<<" -> 11 photos were taken
+
+// function mergeArrays(a, b) {
+//   // your code here
+//   const res = [...new Set(a.concat(b))];
+//   return res.filter((el) => !isNaN(+el)).sort((a,b)=> a - b);
+// }
+// console.log(mergeArrays([ 3, 5, 1], [2, 4, 6]));
+// function reverseWords(str) {
+//   // your code here
+//   const res = str
+//     .split(" ")
+//     .map((el) => (el === " " ? el : el.split("").reverse().join("")));
+//   return res.join(" ");
+// }
+// console.log(reverseWords("qwe qwe  qwe"));
+
+// function digitalRoot(n) {
+//   // ...
+//   const count = (n) => {
+//     return String(n).split("").reduce((acc, el) => {
+//       acc += +el;
+//       return acc;
+//     }, 0);
+//   };
+//   let res = count(n);
+//   do {
+//     res = count(res)
+//   } while (res >= 10);
+//   return res;
+// }
+
+// console.log(digitalRoot(664066));
+
+// function digital_root(n) {
+//   if (n < 10) return n;
+
+//   return digital_root(
+//     n.toString().split('').reduce(function(acc, d) { return acc + +d; }, 0));
+// }
+
+// function digital_root(n) {
+//   if (n < 10) return n;
+
+//   return digital_root(
+//     n.toString().split('').reduce(function(acc, d) { return acc + +d; }, 0));
+// }
+
+// const snail = (array) => {
+//   //enjoy
+//   let arrToSnail = [...array];
+//   const amountOfSteps = Math.pow(array.length, 2) - Math.pow(array[0].length - 1, 2);
+//   const walking = (arr, steps, direction) => {
+//     const result = [];
+//     for (let i = 0; i < steps; i += 1) {
+//       switch (direction) {
+//         case "right":
+//           result.push(arr[0][i]);
+//           break;
+//         case "down":
+//           result.push(arr[i][arr[i].length - 1]);
+//           break;
+//         case "left":
+//           result.push(arr[arr.length - 1][arr[0].length - 1 - i]);
+//           break;
+//         case "up":
+//           result.push(arr[arr.length - 1 - i][0]);
+//           break;
+//         default:
+//           break;
+//       }
+//     }
+//     return result;
+//   };
+//   const result = [];
+//   let currentStep = 0;
+//   let amountOfStep = array.length;
+//   for (let i = 0; i < amountOfSteps; i += 1) {
+//     currentStep += 1;
+//     if (currentStep === 1) {
+//       result.push(...walking(arrToSnail, amountOfStep, "right"));
+//       amountOfStep -= 1;
+//       arrToSnail.shift();
+//     } else if (currentStep === 2) {
+//       result.push(...walking(arrToSnail, amountOfStep, "down"));
+//       arrToSnail = [
+//         ...arrToSnail.map((el) => {
+//           el.pop();
+//           return el;
+//         }),
+//       ];
+//     } else if (currentStep === 3) {
+//       result.push(...walking(arrToSnail, amountOfStep, "left"));
+//       arrToSnail.splice(-1, 1);
+//       amountOfStep -= 1;
+//     } else {
+//       result.push(...walking(arrToSnail, amountOfStep, "up"));
+//       arrToSnail = [
+//         ...arrToSnail.map((el) => {
+//           el.shift();
+//           return el;
+//         }),
+//       ];
+//       currentStep = 0;
+//     }
+//   }
+//   return result;
+// };
+
+// console.log(
+//   snail([
+//     [1, 2, 3],
+//     [4, 5, 6],
+//     [7, 8, 9],
+//   ])
+// );
+// console.log(
+//   snail([
+//     [1, 2, 3],
+//     [8, 9, 4],
+//     [7, 6, 5],
+//   ])
+// );
+// console.log(
+//   snail([
+//     [1, 2, 3, 4, 5],
+//     [6, 7, 8, 9, 10],
+//     [11, 12, 13, 14, 15],
+//     [16, 17, 18, 19, 20],
+//     [21, 22, 23, 24, 25],
+//   ])
+// );
