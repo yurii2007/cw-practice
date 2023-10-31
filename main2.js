@@ -608,3 +608,32 @@ function josephus(items, k) {
 //     [21, 22, 23, 24, 25],
 //   ])
 // );
+
+/*No time for stories. Reverse an array, return the result. Do whatever you want 
+with the original array. Don't use Array.prototype.reverse.
+You have 30 bytes to spare. */
+
+let reverse = (a) => a.map(a.pop, [...a]);
+// console.log(reverse([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+/*Your mission, should you accept it, is to return the count of all integers in a given range which
+ do not contain the digit 5 (in base 10 representation).
+You are given the start and the end of the integer range. The start and the end are both inclusive. */
+
+function dontGiveMeFive(start, end) {
+  return 0;
+}
+
+// function palindromize(number) {
+//   const isPalindrom = (int) => {
+//     return int.toString() === int.toString().split("").reverse().join("");
+//   };
+//   const res = [0, number];
+//   while (!isPalindrom(res[1])) {
+//     res[0] += 1;
+//     res[1] = res[1] + +res[1].toString().split("").reverse().join("");
+//   }
+//   return res.join(" ");
+// }
+
+// console.log(palindromize(195));
