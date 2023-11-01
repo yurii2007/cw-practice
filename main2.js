@@ -650,3 +650,18 @@ You are encouraged to develop an effective algorithm: test cases include really 
 // }
 
 // console.log(isTriangleNumber(0));
+
+// Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+
+// function pigIt(str){
+//   //Code here
+//   return str.split(" ").map(el=>{
+//     if(!el.match(/[A-z]/i)) return el
+//     const word = el.split("")
+//     word.push(word.shift())
+//     word.push("ay")
+//     return word.join("")
+//   }).join(" ")
+// }
+
+// console.log(pigIt("Hello world !"));
