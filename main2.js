@@ -637,3 +637,16 @@ function dontGiveMeFive(start, end) {
 // }
 
 // console.log(palindromize(195));
+
+/*Check if a given input is a valid triangle number. Return true if it is, false if it is not
+ (note that any non-integers, including non-number types, are not triangle numbers).
+You are encouraged to develop an effective algorithm: test cases include really big numbers. */
+
+// function isTriangleNumber(number) {
+//   //Your code here
+//   if (typeof number !== "number") return false;
+//   const numberToCheck = (-1 + Math.sqrt(1 + 8 * number)) / 2;
+//   return numberToCheck === Math.ceil(numberToCheck);
+// }
+
+// console.log(isTriangleNumber(0));
